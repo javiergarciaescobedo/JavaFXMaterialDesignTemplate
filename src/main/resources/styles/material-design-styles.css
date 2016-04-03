@@ -1,0 +1,84 @@
+* {
+   -fx-color-50: #E8EAF6;
+   -fx-color-500: #3F51B5;
+}
+
+/* APPBAR */
+
+.appbar {
+    -fx-pref-height: 56;
+    -fx-min-height: 56;
+    -fx-max-height: 56;
+    -fx-background-color: -fx-color-500;
+    -fx-padding: 0 16 0 16;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.appbar .navigation_bar {
+    -fx-padding:  0 16 0 0;
+}
+
+.appbar .title {
+    -fx-text-fill: #FFF;
+    -fx-font-size: 20;
+}
+
+.appbar .icons-bar {
+    -fx-spacing: 16;
+}
+
+/* NAVIGATION DRAWER MENU */
+
+.navigation-drawer {
+    -fx-background-color: #FFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.navigation-drawer .image-view {
+    -fx-pref-height: 48;
+    -fx-opacity: 0.54;
+    -fx-translate-x: 16;
+    -fx-translate-y: 12;
+}
+
+.navigation-drawer .label {
+    -fx-text-fill: #000;
+    -fx-font-size: 14;
+    -fx-opacity: 0.87;
+    -fx-pref-height: 48;
+    -fx-padding:  0 16 0 56;
+}
+
+.navigation-drawer .item-selectable:hover {
+    -fx-background-color: -fx-color-50;
+}
+
+/* TOOLBAR MENU */
+
+.menu-tools {
+    -fx-background-color: #FFF;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+}
+
+.menu-tools .label {
+    -fx-text-fill: #000;
+    -fx-font-size: 14;
+    -fx-opacity: 0.87;
+    -fx-pref-height: 48;
+    -fx-padding: 0 16 0 16;
+}
+
+.menu-tools .item-selectable:hover {
+    -fx-background-color: -fx-color-50;
+}
+
+/* CONTROLS */
+.label {
+    -fx-font-size: 13;
+    -fx-padding: 0 8 0 0;
+}
+
+.text-field {
+    -fx-font-size: 13;
+    -fx-padding: 4 4 4 4;    
+}

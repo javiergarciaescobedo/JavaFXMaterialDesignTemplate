@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" stylesheets="@../styles/material-design-styles.css" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="es.javiergarciaescobedo.multiviewjavafxsample.Controller">
+   <children>
+      <VBox fx:id="paneMainContainer" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <GridPane fx:id="paneToolBar" styleClass="appbar" VBox.vgrow="NEVER">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="40.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER_LEFT" styleClass="navigation_bar" GridPane.hgrow="NEVER">
+                     <children>
+                        <ImageView onMouseClicked="#onMouseClickedMenuNavigationDrawer" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_menu_white_24dp_1x.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" styleClass="title_bar" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+                     <children>
+                        <Label styleClass="title" text="LabelTitle" />
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_RIGHT" styleClass="icons-bar" GridPane.columnIndex="2">
+                     <children>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_favorite_white_24dp_1x.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_search_white_24dp_1x.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView onMouseClicked="#onMouseClickedMenuToolbar" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/ic_more_vert_white_24dp_1x.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </HBox>
+               </children>
+            </GridPane>
+            <Pane fx:id="paneContentArea" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="Label" />
+                        <Label text="Label" GridPane.rowIndex="1" />
+                        <Label text="Label" GridPane.rowIndex="2" />
+                        <TextField GridPane.columnIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+               </VBox.margin>
+            </Pane>
+            <GridPane fx:id="paneBottomBar" VBox.vgrow="NEVER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+            </GridPane>
+         </children>
+      </VBox>
+      <Pane fx:id="paneEffectDisable" style="-fx-background-color: #3337;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="paneMenuNavigationDrawer" onMouseExited="#onMouseExitedPaneNavigationDrawer" styleClass="navigation-drawer" AnchorPane.topAnchor="0.0" />
+      <AnchorPane fx:id="paneMenuToolbar" layoutX="10.0" layoutY="66.0" onMouseExited="#onMouseExitedPaneToolbarMenu" styleClass="menu-tools" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+   </children>
+</AnchorPane>
